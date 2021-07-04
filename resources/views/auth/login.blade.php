@@ -3,7 +3,10 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8  my-5">
+        <div class="col-md-8 my-auto">
+            <div class="justify-content-center align-items-center pb-5" style="margin-left: 106px;">
+                <img src="{{asset('assets/logo2.jpeg')}}">
+            </div>
             <div class="card">
                 <div class="card-header">Login</div>
 
@@ -54,14 +57,8 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                                    Login
                                 </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        Esqueceu sua senha ?
-                                    </a>
-                                @endif
                             </div>
                         </div>
                     </form>

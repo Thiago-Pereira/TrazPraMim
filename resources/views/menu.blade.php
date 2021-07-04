@@ -11,8 +11,14 @@
             </a>
         </li>
     </ul>
-    <div class="bg-secondary" style="margin-right: 16px; font-size: 17px; border: none; cursor: pointer;">
-        <a href=""></a>
+    <div class="bg-secondary" style="margin-right: 16px; margin-top: 8px;  font-size: 17px; border: none; cursor: pointer;">
+        <a class="text-dark" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Logout
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
     </div>
 </nav>
 
@@ -37,11 +43,11 @@
         </div>
         <div class="d-flex flex-column mx-auto align-items-center" >
             <label class="font-weight-bold text-dark" style="padding-bottom: 10px; font-size: 18px;">Compra</label>
-            <div class="d-flex flex-row bg-white align-items-center justify-content-center rounded" style="cursor: pointer; height: 100px; width: 100px;">
-                <a href="{{ route('comprar') }}" style="color: #0987A0;">
+            <a href="{{ route('comprar') }}" style="color: #0987A0;">
+                <div class="d-flex flex-row bg-white align-items-center justify-content-center rounded" style="cursor: pointer; height: 100px; width: 100px;">
                     <i class="fas fa-cart-arrow-down fa-2x"></i>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
         <div class="d-flex flex-column mx-auto align-items-center" >
             <label class="font-weight-bold text-dark" style="padding-bottom: 10px; font-size: 18px;">Área de Cadastro</label>
